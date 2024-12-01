@@ -1,13 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-
-public class CardController : MonoBehaviour, IPointerDownHandler
+using UnityEngine.InputSystem;
+public class CardController : MonoBehaviour
 {
-    public void OnPointerDown(PointerEventData eventData)
+    Camera _mainCamera;
+    private void Awake()
     {
-       
-        Debug.Log("Test");
+        _mainCamera = Camera.main;
     }
+
+    public void OnClick(InputAction.CallbackContext iContext)
+    {
+        if (!iContext.started) return;
+
+        var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if (rayHit)
+        {
+            Debug.Log("Test");
+        }
+        else
+        {
+
+
+        }
+
+    }
+    
+
+    
 }
