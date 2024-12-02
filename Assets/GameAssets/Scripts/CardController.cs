@@ -1,30 +1,22 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 public class CardController : MonoBehaviour
 {
-    Camera _mainCamera;
-    private void Awake()
+    CardInfo _cardInfo;
+    BoxCollider2D _collider;
+    SpriteRenderer _renderer;
+    public void _LoadCard(CardInfo iCardInfo)
     {
-        _mainCamera = Camera.main;
-    }
-
-    public void OnClick(InputAction.CallbackContext iContext)
-    {
-        if (!iContext.started) return;
-
-        var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-        if (rayHit)
-        {
-            Debug.Log("Test");
-        }
-        else
-        {
-
-
-        }
-
+        _cardInfo = iCardInfo;
+        _collider =  gameObject.AddComponent<BoxCollider2D>();
+        _collider.size = GameSettings.Instance.DefaultColliderSize;
+        _renderer = gameObject.AddComponent<SpriteRenderer>();
+        //_renderer.sprite = GameSettings.Instance.CardBackSprite;
+        _renderer.sprite = _cardInfo.CardFaceSprite;
     }
     
 
-    
+
+
 }

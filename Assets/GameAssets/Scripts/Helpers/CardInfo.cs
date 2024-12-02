@@ -1,18 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CardInfo : MonoBehaviour
+[CreateAssetMenu(fileName ="NewCard",menuName ="BAHMAN/Task2/New Card",order =1)]
+public class CardInfo : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string CardName;
+    public Sprite CardFaceSprite;
 }
