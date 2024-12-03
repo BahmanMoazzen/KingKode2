@@ -20,6 +20,8 @@ public class GameSettings : ScriptableObject
     public float YOffset = .5f;
     [Range(0, 2)]
     public float CameraBuffer = 1f;
+    [Range(0, 2)]
+    public float AnimationWaitTime = .8f;
     public CardInfo[] AllCards;
     public Vector2 DefaultColliderSize;
     public Sprite CardBackSprite;

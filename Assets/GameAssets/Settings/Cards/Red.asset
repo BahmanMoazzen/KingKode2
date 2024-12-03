@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a3e0fb18f27548a3c89009149d5c1, type: 3}
   m_Name: Red
   m_EditorClassIdentifier: 
-  CardName: White Card
-  CardFace: {fileID: 21300000, guid: 52a0e25ce95abf84f8a0e2ae4a27ac27, type: 3}
+  CardName: Red Card
+  CardFaceSprite: {fileID: 21300000, guid: 1165a4a5c3b6c8249af3424611996bca, type: 3}
