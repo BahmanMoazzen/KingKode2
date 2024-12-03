@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultCameraWidth: 480
   DefaultCameraHeight: 800
-  XDimension: 2
-  YDimension: 3
+  XDimension: 6
+  YDimension: 6
   DeckVariation: 2
   XOffset: 1
   YOffset: 1.3
